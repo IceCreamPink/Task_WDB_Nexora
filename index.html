@@ -13,7 +13,21 @@
 <body>
     <div class="container">
         <!-- Navbar -->
-    <div id="navbar"></div>
+<!--     <div id="navbar"></div> -->
+        <nav>
+    <div class="items-nav">
+        <a href="#home"><img src="public/logo.png" alt="Logo Nexora"></a>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="nav-btn">
+        <button id="btn-login" onclick="window.location.href='../auth/login.html'">Login</button>
+        <button id="btn-singup" onclick="window.location.href='../auth/signup.html'">SignUp</button>
+    </div>
+</nav>
 
         <!-- Header -->
         <div class="header" id="home">
@@ -178,7 +192,7 @@
     </div>
 
     <!-- Footer -->
-    <div id="footer"></div>
+<!--     <div id="footer"></div>
     <script>
 
         function loadComponent(elementId, filePath) {
@@ -193,7 +207,19 @@
             loadComponent('navbar', 'components/navbar.html');
             loadComponent('footer', 'components/footer.html');
         });
-    </script>
+    </script> -->
+    <div class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="public/logo.png" alt="">
+        </div>
+        <div class="footer-info">
+            <p>nexoratech@gmail.com</p>
+            <p>+62399397108</p>
+            <p>Copyright 2025 HenraD.Pradana</p>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
