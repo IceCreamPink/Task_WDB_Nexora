@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexora Tech</title>
+    <link rel="website icon" type="png" href="public/logoweb.png">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -12,20 +13,7 @@
 <body>
     <div class="container">
         <!-- Navbar -->
-        <nav>
-            <div class="items-nav">
-                <a href="#home"><img src="public/logo.png" alt="Logo Nexora"></a>
-                <ul>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#service">Service</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="nav-btn">
-                <button id="btn-login">Login</button>
-                <button id="btn-singup">SignUp</button>
-            </div>
-        </nav>
+    <div id="navbar"></div>
 
         <!-- Header -->
         <div class="header" id="home">
@@ -58,19 +46,19 @@
                 </div>
                 <div class="card-service">
                     <h4>App Development</h4>
-                    <img src="public/items/about1.png" alt="Web Development">
+                    <img src="public/items/about2.png" alt="Web Development">
                     <p>Building mobile and desktop apps that enhance everyday life and business operations.</p>
                     <button>Detail</button>
                 </div>
                 <div class="card-service">
                     <h4>Creative Design</h4>
-                    <img src="public/items/about1.png" alt="Web Development">
+                    <img src="public/items/about3.png" alt="Web Development">
                     <p>Providing UI/UX and graphic design solutions that combine aesthetics with functionality.</p>
                     <button>Detail</button>
                 </div>
                 <div class="card-service">
                     <h4>Home Wi-Fi Installation</h4>
-                    <img src="public/items/about1.png" alt="Web Development">
+                    <img src="public/items/about4.png" alt="Web Development">
                     <p>Ensuring reliable connectivity for homes and small businesses.</p>
                     <button>Detail</button>
                 </div>
@@ -190,18 +178,22 @@
     </div>
 
     <!-- Footer -->
-    <div class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="public/logo.png" alt="">
-            </div>
-            <div class="footer-info">
-                <p>nexoratech@gmail.com</p>
-                <p>+62399397108</p>
-                <p>Copyright 2025 HenraDwiPradana</p>
-            </div>
-        </div>
-    </div>
+    <div id="footer"></div>
+    <script>
+
+        function loadComponent(elementId, filePath) {
+            fetch(filePath)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById(elementId).innerHTML = data;
+                })
+                .catch(error => console.error('Error loading component:', error));
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            loadComponent('navbar', 'components/navbar.html');
+            loadComponent('footer', 'components/footer.html');
+        });
+    </script>
 </body>
 
 </html>
